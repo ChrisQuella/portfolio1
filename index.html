@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="zh" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>高维薇的个人作品集</title>
+  
+  <script>
+    const savedTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    document.documentElement.setAttribute('data-theme', savedTheme);
+  </script>
+
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <!-- 导航栏 -->
+  <nav>
+    <div class="container nav-container">
+      <a href="#" class="logo">
+        <span class="logo-text">个人作品集</span>
+        <div class="logo-dot"></div>
+      </a>
+      
+      <div class="nav-actions">
+        <div class="nav-links">
+          <a href="#home">首页</a>
+          <a href="#about">关于我</a>
+          <a href="#works">作品展示</a>
+          <a href="#contact">联系我</a>
+        </div>
+        
+        <div class="nav-controls">
+          <button class="control-btn theme-toggle" aria-label="切换主题">
+            <i class="fas fa-sun sun-icon"></i>
+            <i class="fas fa-moon moon-icon"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 首页 Hero -->
+  <section id="home" class="intro">
+    <div class="bg-decoration"></div>
+    <div class="container flex-center column">
+      <div class="avatar-container">
+        <img src="assets/images/头像.PNG" alt="Chris的头像" class="avatar">
+        <div class="avatar-glow"></div>
+      </div>
+      <h1 class="gradient-text">你好，我是高维薇</h1>
+      <p class="subtitle">计算机科学与技术专业 · 大四应届毕业生<br>热爱编程、AI绘画与AI视频创作</p>
+      <div class="hero-cta">
+        <a href="#works" class="btn-primary">查看作品</a>
+        <a href="#contact" class="btn-secondary">联系我</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 关于我 -->
+  <section id="about" class="section-padding">
+    <div class="container">
+      <h2>关于我</h2>
+      <div class="about-content">
+        <div class="about-text">
+          <p>我是一名计算机科学与技术专业的大四应届毕业生，对技术充满热情。</p>
+          <p>除了编程开发，我还热衷于探索AI创作领域，包括AI绘画和AI视频制作，喜欢将技术与艺术相结合，创造独特的数字作品。</p>
+        </div>
+        
+        <!-- 技能标签云 -->
+        <div class="skills-cloud">
+          <h3>技能标签</h3>
+          <div class="skill-tags">
+            <span class="skill-tag programming"><i class="fas fa-code"></i> 编程开发</span>
+            <span class="skill-tag ai-art"><i class="fas fa-palette"></i> AI绘画</span>
+            <span class="skill-tag ai-video"><i class="fas fa-video"></i> AI视频</span>
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">JavaScript</span>
+            <span class="skill-tag">Stable Diffusion</span>
+            <span class="skill-tag">Midjourney</span>
+            <span class="skill-tag">ComfyUI</span>
+            <span class="skill-tag">Runway</span>
+            <span class="skill-tag">Web开发</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 作品展示 -->
+  <section id="works" class="section-padding">
+    <div class="container">
+      <h2>作品展示</h2>
+      
+      <!-- 作品分类标签 -->
+      <div class="works-tabs">
+        <button class="tab-btn active" data-tab="programming">
+          <i class="fas fa-code"></i> 编程项目
+        </button>
+        <button class="tab-btn" data-tab="ai-art">
+          <i class="fas fa-palette"></i> AI绘画
+        </button>
+        <button class="tab-btn" data-tab="ai-video">
+          <i class="fas fa-video"></i> 视频作品
+        </button>
+        <button class="tab-btn" data-tab="others">
+          <i class="fas fa-folder-open"></i> 其他创作
+        </button>
+      </div>
+
+      <!-- 编程项目 -->
+      <div class="works-content active" id="programming">
+        <div class="github-link">
+          <a href="https://github.com/ChrisQuella" target="_blank" class="btn-github">
+            <i class="fab fa-github"></i> 访问我的GitHub
+          </a>
+        </div>
+        <div class="projects-grid">
+          <!-- 项目卡片将通过JS动态生成 -->
+        </div>
+      </div>
+
+      <!-- AI绘画画廊 -->
+      <div class="works-content" id="ai-art">
+        <div class="gallery-filters">
+          <button class="filter-btn active" data-filter="all">全部</button>
+          <button class="filter-btn" data-filter="portrait">人像</button>
+          <button class="filter-btn" data-filter="landscape">风景</button>
+          <button class="filter-btn" data-filter="abstract">抽象</button>
+          <button class="filter-btn" data-filter="anime">动漫</button>
+        </div>
+        <div class="gallery-grid">
+          <!-- 画廊图片将通过JS动态生成 -->
+        </div>
+      </div>
+
+      <!-- 视频作品 -->
+      <div class="works-content" id="ai-video">
+        <div class="video-grid">
+          <!-- 视频卡片将通过JS动态生成 -->
+        </div>
+      </div>
+
+      <!-- 其他创作 -->
+      <div class="works-content" id="others">
+        <div class="others-grid">
+          <!-- 其他作品将通过JS动态生成 -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 联系方式 & 留言表单 -->
+  <section id="contact" class="contact section-padding">
+    <div class="container">
+      <h2>联系我</h2>
+      
+      <div class="contact-wrapper">
+        <!-- 联系信息 -->
+        <div class="contact-info">
+          <h3>联系方式</h3>
+          <div class="contact-item">
+            <i class="fas fa-phone"></i>
+            <span>17616160861</span>
+            <button class="copy-btn" data-copy="17616160861" title="复制"><i class="fas fa-copy"></i></button>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <span>2415369196@qq.com</span>
+            <button class="copy-btn" data-copy="2415369196@qq.com" title="复制"><i class="fas fa-copy"></i></button>
+          </div>
+          <div class="contact-item">
+            <i class="fab fa-weixin"></i>
+            <span>xxxxxxx</span>
+            <button class="copy-btn" data-copy="xxxxxxx" title="复制"><i class="fas fa-copy"></i></button>
+          </div>
+          <div class="contact-item">
+            <a href="https://github.com/ChrisQuella" target="_blank">
+              <i class="fab fa-github"></i>
+              <span>GitHub: ChrisQuella</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- 留言表单 -->
+        <div class="contact-form-wrapper">
+          <h3>给我留言</h3>
+          <form class="contact-form" id="contactForm">
+            <div class="form-group">
+              <label for="name">您的姓名</label>
+              <input type="text" id="name" name="name" required placeholder="请输入您的姓名">
+            </div>
+            <div class="form-group">
+              <label for="email">电子邮箱</label>
+              <input type="email" id="email" name="email" required placeholder="请输入您的邮箱">
+            </div>
+            <div class="form-group">
+              <label for="message">留言内容</label>
+              <textarea id="message" name="message" rows="5" required placeholder="请输入您的留言..."></textarea>
+            </div>
+            <button type="submit" class="btn-submit">
+              <i class="fas fa-paper-plane"></i> 发送留言
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>© 2025 Chris. All rights reserved.</footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
