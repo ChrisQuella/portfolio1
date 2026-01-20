@@ -160,7 +160,7 @@ const projectsData = [
     title: "社团管理系统",
     desc: "基于Spring Boot + Vue的高校社团管理系统，支持社团管理、活动发布、成员管理等功能",
     tech: ["Java", "Spring Boot", "Vue.js", "MySQL"],
-    github: "https://github.com/ChrisQuella",
+    github: "https://github.com/ChrisQuella/Club-Management-System",
     demo: "pages/projects/project-club.html"
   },
   {
@@ -168,7 +168,7 @@ const projectsData = [
     title: "Markdown转Word工具",
     desc: "功能丰富的Markdown转Word文档工具，提供学术版、开发者版、办公版三个专业版本",
     tech: ["JavaScript", "Electron", "marked.js", "docx.js"],
-    github: "https://github.com/ChrisQuella",
+    github: "https://github.com/ChrisQuella/Online-Markdown-to-Word-Converter",
     demo: "pages/projects/project-md2word.html"
   },
   {
@@ -176,7 +176,7 @@ const projectsData = [
     title: "在线图片压缩工具",
     desc: "简单易用的在线证件照压缩工具，智能压缩至1M以下，保持原有尺寸",
     tech: ["HTML5", "Canvas API", "JavaScript"],
-    github: "https://github.com/ChrisQuella",
+    github: "https://github.com/ChrisQuella/Image-Compression-Tool",
     demo: "pages/projects/project-image-compress.html"
   },
   {
@@ -184,7 +184,7 @@ const projectsData = [
     title: "智能写作助手",
     desc: "基于智谱AI的智能写作辅助工具，支持6种写作模式和流式输出，提供历史记录管理",
     tech: ["JavaScript", "AI API", "Markdown", "Tailwind CSS"],
-    github: "https://github.com/ChrisQuella",
+    github: "https://github.com/ChrisQuella/AI-Writing-Assistant",
     demo: "pages/projects/project-writing-assistant.html"
   }
 ];
