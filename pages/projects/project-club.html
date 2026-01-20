@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>社团管理系统 - 高维薇的作品集</title>
+  
+  <script>
+    const savedTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    document.documentElement.setAttribute('data-theme', savedTheme);
+  </script>
+
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <nav>
+    <div class="container nav-container">
+      <a href="../../index.html" class="logo">
+        <span class="logo-text">个人作品集</span>
+        <div class="logo-dot"></div>
+      </a>
+      
+      <div class="nav-actions">
+        <div class="nav-links">
+          <a href="../../index.html#home">首页</a>
+          <a href="../../index.html#about">关于我</a>
+          <a href="../../index.html#works">作品展示</a>
+          <a href="../../index.html#contact">联系我</a>
+        </div>
+        
+        <div class="nav-controls">
+          <button class="control-btn theme-toggle" aria-label="切换主题">
+            <i class="fas fa-sun sun-icon"></i>
+            <i class="fas fa-moon moon-icon"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <section class="section-padding">
+    <div class="container">
+      <div class="card" style="padding: 40px;">
+        <h2>🎓 社团管理系统</h2>
+        
+        <div style="max-width: 800px; margin: 30px auto; line-height: 1.8; color: var(--text-muted);">
+          <h3>📋 项目简介</h3>
+          <p>这是一个基于Spring Boot + Vue.js开发的高校社团管理系统，旨在为高校社团提供一个完整的信息化管理平台。系统实现了社团管理、活动发布、成员管理、消息通知等核心功能，提升了社团管理的效率和规范性。</p>
+          
+          <h3>✨ 核心功能</h3>
+          <ul style="list-style: none; padding-left: 0;">
+            <li>🏢 <strong>社团管理</strong>：社团信息维护、社团分类管理、社团审核</li>
+            <li>👥 <strong>成员管理</strong>：成员信息管理、角色权限分配、入社申请审批</li>
+            <li>📅 <strong>活动管理</strong>：活动发布、活动报名、活动签到、活动统计</li>
+            <li>📢 <strong>公告通知</strong>：系统公告、社团通知、消息推送</li>
+            <li>💰 <strong>财务管理</strong>：社费缴纳记录、财务统计分析</li>
+            <li>📊 <strong>数据统计</strong>：社团数据分析、活动数据统计、可视化报表</li>
+            <li>💬 <strong>实时消息</strong>：基于WebSocket的实时消息通知</li>
+          </ul>
+
+          <h3>🛠️ 技术栈</h3>
+          <div class="tech-stack" style="margin: 20px 0;">
+            <span class="tech-tag">Java</span>
+            <span class="tech-tag">Spring Boot</span>
+            <span class="tech-tag">MyBatis</span>
+            <span class="tech-tag">MySQL</span>
+            <span class="tech-tag">Vue.js</span>
+            <span class="tech-tag">Element UI</span>
+            <span class="tech-tag">WebSocket</span>
+            <span class="tech-tag">ECharts</span>
+          </div>
+
+          <h3>🎯 项目亮点</h3>
+          <ul>
+            <li>前后端分离架构，提高开发效率和系统可维护性</li>
+            <li>基于RBAC的权限管理，支持多角色权限控制</li>
+            <li>WebSocket实时消息推送，提升用户体验</li>
+            <li>ECharts数据可视化，直观展示统计数据</li>
+            <li>响应式设计，支持PC端和移动端访问</li>
+          </ul>
+
+          <h3>📸 系统截图</h3>
+          
+          <div style="margin: 30px 0;">
+            <h4 style="color: var(--text-primary); margin-bottom: 15px;">🔐 登录界面</h4>
+            <img src="../../assets/images/club-system-login.png" alt="社团管理系统-登录页面" class="project-img" style="width: 100%; border-radius: 8px; margin-bottom: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+            <p style="text-align: center; color: var(--text-muted); font-size: 0.9em; margin-bottom: 30px;">清新的登录界面设计，音乐主题插画风格</p>
+          </div>
+
+          <div style="margin: 30px 0;">
+            <h4 style="color: var(--text-primary); margin-bottom: 15px;">📊 数据统计仪表板</h4>
+            <img src="../../assets/images/club-system-dashboard.png" alt="社团管理系统-数据统计" class="project-img" style="width: 100%; border-radius: 8px; margin-bottom: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+            <p style="text-align: center; color: var(--text-muted); font-size: 0.9em;">数据统计仪表板 - 社团类型分布与用户类型分析，支持多维度数据展示</p>
+          </div>
+        </div>
+
+        <div class="publish-links-wrapper" style="margin-top: 40px;">
+          <div class="publish-links">
+            <a href="https://github.com/ChrisQuella" target="_blank" class="publish-link github">
+              <i class="fab fa-github"></i> <span>查看源码</span>
+            </a>
+            <a href="../../index.html#contact" class="publish-link">
+              <i class="fas fa-envelope"></i> <span>联系我了解更多</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer>© 2025 Chris. All rights reserved.</footer>
+
+  <script src="../../assets/js/main.js"></script>
+</body>
+</html>
