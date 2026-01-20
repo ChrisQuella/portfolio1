@@ -389,21 +389,12 @@ function initContactForm() {
   const form = document.getElementById('contactForm');
   if (!form) return;
   
+  // 如果使用Formspree，表单会自动提交
+  // 添加提交状态提示
   form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    
-    const formData = new FormData(form);
-    const data = {
-      name: formData.get('name'),
-      email: formData.get('email'),
-      message: formData.get('message')
-    };
-    
-    // 这里可以添加实际的表单提交逻辑
-    // 例如发送到后端API或使用第三方服务
-    
-    alert('感谢您的留言！我会尽快回复您。');
-    form.reset();
+    const submitBtn = form.querySelector('.btn-submit');
+    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> 发送中...';
+    submitBtn.disabled = true;
   });
 }
 
